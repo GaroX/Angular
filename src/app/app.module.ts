@@ -1,8 +1,16 @@
+// Dependencies
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+// Modules
+import { AppRoutingModule } from './app.routing';
+import { ComponentsModule } from './components/components.module';
+import { MaterialDesignModule } from '../vendors/material-design/material-design.module';
+
+// Components
+import { AppComponent } from './layouts/app.component';
 
 @NgModule({
   declarations: [
@@ -10,7 +18,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    MaterialDesignModule,
+    AppRoutingModule,
+    ComponentsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
